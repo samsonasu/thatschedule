@@ -18,15 +18,24 @@ module.exports = function(grunt) {
           'app.js': ['src/*.coffee'] // compile and concat into single file
         }
       }
-    }
+    },
+    watch: {
+      scripts: {
+        files: ['src/*.coffee'],
+        tasks: ['coffee'],
+        options: {
+          spawn: false,
+        },
+      },
+    },
   });
 
   // Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-web-server');
-
   grunt.loadNpmTasks('grunt-contrib-coffee');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
 
-  grunt.registerTask('default', ['coffee']);
+  grunt.registerTask('default', ['watch', 'web_server']);
 
 };

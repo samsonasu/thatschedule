@@ -6,8 +6,9 @@
 	<link rel="stylesheet" type="text/css" href="css/screen.css" media="all" />
 	<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
 
-	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
-	<script type="text/javascript" src="js/core.js"></script>
+	<script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="handlebars-v3.0.3.js"></script>
+  <script type="text/javascript" src="underscore-min.js"></script>
 	<script type="text/x-handlebars-template" id="dayTemplate">
 		<div class="schedule-day">
       <h2>{{Day}}</h2>
@@ -34,7 +35,16 @@
 	</header>
 
 	<div class="content">
-
+    <script type="text/javascript">
+      $(document).ready(function() {
+        var sessionTemplate = Handlebars.compile($("#dayTemplate").html());
+        $.getJSON('sessions.json', function(sessionData) {
+          _.each(sessionData.ScheduledSessions, function(session) {
+            $('body').append(sessionTemplate(session));
+          });
+        });
+      });
+    </script>
 	</div>
 
 	

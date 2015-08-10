@@ -19,6 +19,13 @@ module.exports = function(grunt) {
         }
       }
     },
+    compass: {
+      dist: {
+        options: {
+          config: 'config.rb'
+        }
+      }
+    },
     watch: {
       scripts: {
         files: ['src/*.coffee'],
@@ -27,15 +34,24 @@ module.exports = function(grunt) {
           spawn: false,
         },
       },
+      scripts: {
+        files: ['css/sass/**/*.sass'],
+        tasks: ['compass']
+      }
     },
+    concurrent: {
+        dev: ['watch', 'web_server']
+    }
   });
 
   // Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-web-server');
   grunt.loadNpmTasks('grunt-contrib-coffee');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-concurrent');
 
 
-  grunt.registerTask('default', ['watch', 'web_server']);
+  grunt.registerTask('default', ['concurrent:dev']);
 
 };

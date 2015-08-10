@@ -25,6 +25,8 @@
       {{/each}}
     </div>
   </script>
+
+  <script type="text/javascript" src="app.js"></script>
 </head>
 
 <body>
@@ -39,16 +41,16 @@
       $(document).ready(function() {
         var sessionTemplate = Handlebars.compile($("#dayTemplate").html());
         $.getJSON('sessions.json', function(sessionData) {
-          _.each(sessionData.ScheduledSessions, function(session) {
-            $('body').append(sessionTemplate(session));
+          _.each(sessionData.ScheduledSessions, function(dayData) {
+            new DayView(dayData)
           });
         });
       });
     </script>
 	</div>
 
-	
-		
+
+
 				<h4>{{Title}}</h4>
 				<p><strong>Speaker(s): {{Speakers}}</strong></p>
 				<p><em>Room: {{ScheduledRoom}} / Class Level: {{Level}}</em></p>

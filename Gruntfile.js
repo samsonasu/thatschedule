@@ -29,18 +29,20 @@ module.exports = function(grunt) {
     watch: {
       scripts: {
         files: ['src/*.coffee'],
-        tasks: ['coffee'],
-        options: {
-          spawn: false,
-        },
+        tasks: ['coffee']
       },
-      scripts: {
+      sass: {
         files: ['css/sass/**/*.sass'],
         tasks: ['compass']
       }
     },
     concurrent: {
-        dev: ['watch', 'web_server']
+        dev: {
+          tasks: ['watch', 'web_server'],
+          options: {
+            logConcurrentOutput: true
+          }
+        }
     }
   });
 
@@ -53,5 +55,6 @@ module.exports = function(grunt) {
 
 
   grunt.registerTask('default', ['concurrent:dev']);
+  // grunt.registerTask('default', ['watch', 'web_server']);
 
 };

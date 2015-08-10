@@ -18,11 +18,31 @@
           {{#each Sessions}}
             <div class="schedule-row">
               <div class="schedule-column column1">{{Title}}</div>
-              <div class="schedule-column column2">Room: {{ScheduledRoom}}</div>
+              <div class="schedule-column column2">{{ScheduledRoom}}</div>
               <div class="schedule-column column3"><a href="#" data-session-id="{{Id}}">More Info</a></div>
             </div>
             <div class="full-session-details" style="display:none;">
-
+              {{#if IsFamilyApproved}}<div class="family-approved">Family Approved</div>{{/if}}
+              <h4>{{Title}}</h4>
+              <p><strong>Speaker(s): {{#each Speakers}}{{FirstName}} {{LastName}} {{/each}}</strong></p>
+              <p><em>Room: {{ScheduledRoom}} / Class Level: {{Level}}</em></p>
+              <p>{{Description}}</p>
+              <h4>Speakers</h4>
+              <div class="session-speakers">
+                <img src="{{HeadShot}}" />
+                <p>
+                  <strong>{{FirstName}} {{LastName}}</strong><br />
+                  <em>{{Title}}</em><br />
+                  {{Company}}
+                </p>
+                <p>{{Biography}}</p>
+                {{#if WebSite}}<a href="{{WebSite}}" target="_blank">{{WebSite}}</a>{{/if}}
+                {{#if Twitter}}<a href="https://twitter.com/{{Twitter}}" target="_blank">{{Twitter}}</a>{{/if}}
+                {{#if Facebook}}<a href="{{Facebook}}" target="_blank">{{Facebook}}</a>{{/if}}
+                {{#if GooglePlus}}<a href="{{GooglePlus}}" target="_blank">{{GooglePlus}}</a>{{/if}}
+                {{#if LinkedIn}}<a href="{{LinkedIn}}" target="_blank">{{LinkedIn}}</a>{{/if}}
+                {{#if GitHub}}<a href="{{GitHub}}" target="_blank">{{GitHub}}</a>{{/if}}
+              </div>
             </div>
           {{/each}}
         </div>
@@ -38,59 +58,5 @@
 	<header>
 		<h1>That Schedule</h1>
 	</header>
-
-<div style="display:none;">
-
-
-            //   {{#if IsFamilyApproved}}<div class="family-approved">Family Approved</div>{{/if}}
-            //   <h4>{{Title}}</h4>
-            //   <p><strong>Speaker(s): {{#each Speakers}}{{FirstName}} {{LastName}} {{/each}}</strong></p>
-            //   <p><em>Room: {{ScheduledRoom}} / Class Level: {{Level}}</em></p>
-            //   <p>{{Description}}</p>
-            //   <div class="full-session-details" style="display:none;">
-
-            //   </div>
-
-
-
-
-
-
-					<h4>{{Title}}</h4>
-					<p><em>Room: {{ScheduledRoom}} / Class Level: {{Level}}</em></p>
-					<p>{{Description}}</p>
-					<p>
-						Family Approved: {{IsFamilyApproved}}<br />
-						Favorite: {{IsUserFavorite}}
-					</p>
-					<h4>Speakers</h4>
-					<div class="session-speakers">
-						<img src="{{HeadShot}}" />
-						<p>
-							<strong>{{FirstName}} {{LastName}}</strong><br />
-							<em>{{Title}}</em><br />
-							{{Company}}
-						</p>
-						<p>{{Biography}}</p>
-						{{#if WebSite}}
-           <a href="{{WebSite}}" target="_blank">{{WebSite}}</a>
-           {{/if}}
-           {{#if Twitter}}
-           <a href="https://twitter.com/{{Twitter}}" target="_blank">{{Twitter}}</a>
-           {{/if}}
-           {{#if Facebook}}
-           <a href="{{Facebook}}" target="_blank">{{Facebook}}</a>
-           {{/if}}
-           {{#if GooglePlus}}
-           <a href="{{GooglePlus}}" target="_blank">{{GooglePlus}}</a>
-           {{/if}}
-           {{#if LinkedIn}}
-           <a href="{{LinkedIn}}" target="_blank">{{LinkedIn}}</a>
-           {{/if}}
-           {{#if GitHub}}
-           <a href="{{GitHub}}" target="_blank">{{GitHub}}</a>
-           {{/if}}
-         </div>
-</div>
 </body>
 </html>

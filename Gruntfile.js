@@ -15,7 +15,7 @@ module.exports = function(grunt) {
     coffee: {
       compile: {
         files: {
-          'app.js': ['src/*.coffee'] // compile and concat into single file
+          'app.js': ['src/bootstrap.coffee', 'src/day_view.coffee'] // compile and concat into single file
         }
       }
     },

@@ -1,4 +1,4 @@
-class window.DayView
+class TS.DayView
   constructor: (@day) ->
     @dayTemplate = Handlebars.compile($("#dayTemplate").html())
     @render()

@@ -39,22 +39,9 @@
 		<h1>That Schedule</h1>
 	</header>
 
-	<div class="content">
-    <script type="text/javascript">
-      $(document).ready(function() {
-        var sessionTemplate = Handlebars.compile($("#dayTemplate").html());
-        $.getJSON('sessions.json', function(sessionData) {
-          _.each(sessionData.ScheduledSessions, function(dayData) {
-            new DayView(dayData)
-          });
-        });
-      });
-    </script>
-	</div>
-
 <div style="display:none;">
 
-            
+
             //   {{#if IsFamilyApproved}}<div class="family-approved">Family Approved</div>{{/if}}
             //   <h4>{{Title}}</h4>
             //   <p><strong>Speaker(s): {{#each Speakers}}{{FirstName}} {{LastName}} {{/each}}</strong></p>
@@ -63,7 +50,7 @@
             //   <div class="full-session-details" style="display:none;">
 
             //   </div>
-            
+
 
 
 

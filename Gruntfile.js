@@ -18,15 +18,40 @@ module.exports = function(grunt) {
           'app.js': ['src/*.coffee'] // compile and concat into single file
         }
       }
+    },
+    compass: {
+      dist: {
+        options: {
+          config: 'config.rb'
+        }
+      }
+    },
+    watch: {
+      scripts: {
+        files: ['src/*.coffee'],
+        tasks: ['coffee'],
+        options: {
+          spawn: false,
+        },
+      },
+      scripts: {
+        files: ['css/sass/**/*.sass'],
+        tasks: ['compass']
+      }
+    },
+    concurrent: {
+        dev: ['watch', 'web_server']
     }
   });
 
   // Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-web-server');
-
   grunt.loadNpmTasks('grunt-contrib-coffee');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-concurrent');
 
 
-  grunt.registerTask('default', ['coffee']);
+  grunt.registerTask('default', ['concurrent:dev']);
 
 };

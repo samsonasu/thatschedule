@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>That Schedule</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+	<link rel="stylesheet" type="text/css" href="css/screen.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+
+	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="js/core.js"></script>
+	<script type="text/x-handlebars-template" id="dayTemplate">
+		<div class="schedule-day">
+      <h2>{{Day}}</h2>
+      {{#each TimeSlots}}
+        <div class="schedule-timeslot">
+          <h3>{{Time}}</h3>
+          {{#each Sessions}}
+            <div class="schedule-session" data-session-id="{{Id}}">
+              <h4>{{Title}}</h4>
+              <p>{{Description}}</p>
+            </div>
+          {{/each}}
+        </div>
+      {{/each}}
+    </div>
+  </script>
+</head>
+
+<body>
+	<a id="top"></a>
+
+	<header>
+		<h1>That Schedule</h1>
+	</header>
+
+	<div class="content">
+
+	</div>
+
+	
+		
+				<h4>{{Title}}</h4>
+				<p><strong>Speaker(s): {{Speakers}}</strong></p>
+				<p><em>Room: {{ScheduledRoom}} / Class Level: {{Level}}</em></p>
+				<p>{{Description}}</p>
+				<p>
+					Family Approved: {{IsFamilyApproved}}<br />
+					Favorite: {{IsUserFavorite}}
+				</p>
+				<a href="#" class="more-info">More Info</a>
+				<div class="full-session-details" style="display:none;">
+					<h4>{{Title}}</h4>
+					<p><em>Room: {{ScheduledRoom}} / Class Level: {{Level}}</em></p>
+					<p>{{Description}}</p>
+					<p>
+						Family Approved: {{IsFamilyApproved}}<br />
+						Favorite: {{IsUserFavorite}}
+					</p>
+					<h4>Speakers</h4>
+					<div class="session-speakers">
+						<img src="{{HeadShot}}" />
+						<p>
+							<strong>{{FirstName}} {{LastName}}</strong><br />
+							<em>{{Title}}</em><br />
+							{{Company}}
+						</p>
+						<p>{{Biography}}</p>
+						{{#if WebSite}}
+           <a href="{{WebSite}}" target="_blank">{{WebSite}}</a>
+           {{/if}}
+           {{#if Twitter}}
+           <a href="https://twitter.com/{{Twitter}}" target="_blank">{{Twitter}}</a>
+           {{/if}}
+           {{#if Facebook}}
+           <a href="{{Facebook}}" target="_blank">{{Facebook}}</a>
+           {{/if}}
+           {{#if GooglePlus}}
+           <a href="{{GooglePlus}}" target="_blank">{{GooglePlus}}</a>
+           {{/if}}
+           {{#if LinkedIn}}
+           <a href="{{LinkedIn}}" target="_blank">{{LinkedIn}}</a>
+           {{/if}}
+           {{#if GitHub}}
+           <a href="{{GitHub}}" target="_blank">{{GitHub}}</a>
+           {{/if}}
+         </div>
+       </div>
+
+</body>
+</html>

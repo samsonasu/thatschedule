@@ -18,5 +18,36 @@ header
 
 .schedule-day
   background: #eee
-  margin-bottom: 10px
-  padding: 5px
+  margin: 10px
+  h2
+    background: #ccc
+    border-bottom: 1px solid #c2c2c2
+    display: block
+    font-size: 22px
+    margin: 0
+    padding: 8px
+
+.schedule-timeslot
+  h3
+    background: #ddd
+    border-bottom: 1px solid #d2d2d2
+    display: block
+    font-size: 16px
+    margin: 0
+    padding: 8px    
+
+.schedule-row
+  +clearfix
+  .schedule-column
+    float: left
+    overflow: hidden
+    padding: 8px
+    text-overflow: ellipsis
+    white-space: nowrap
+  .column1
+    width: 50%
+  .column2
+    width: 30%
+  .column3
+    text-align: center
+    width: 20%

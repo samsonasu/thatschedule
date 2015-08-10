@@ -265,6 +265,51 @@ header h1 {
 /* line 19, sass/_layout.sass */
 .schedule-day {
   background: #eee;
-  margin-bottom: 10px;
-  padding: 5px;
+  margin: 10px;
+}
+/* line 22, sass/_layout.sass */
+.schedule-day h2 {
+  background: #ccc;
+  border-bottom: 1px solid #c2c2c2;
+  display: block;
+  font-size: 22px;
+  margin: 0;
+  padding: 8px;
+}
+
+/* line 31, sass/_layout.sass */
+.schedule-timeslot h3 {
+  background: #ddd;
+  border-bottom: 1px solid #d2d2d2;
+  display: block;
+  font-size: 16px;
+  margin: 0;
+  padding: 8px;
+}
+
+/* line 39, sass/_layout.sass */
+.schedule-row {
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 41, sass/_layout.sass */
+.schedule-row .schedule-column {
+  float: left;
+  overflow: hidden;
+  padding: 8px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* line 47, sass/_layout.sass */
+.schedule-row .column1 {
+  width: 50%;
+}
+/* line 49, sass/_layout.sass */
+.schedule-row .column2 {
+  width: 30%;
+}
+/* line 51, sass/_layout.sass */
+.schedule-row .column3 {
+  text-align: center;
+  width: 20%;
 }

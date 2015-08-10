@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="handlebars-v3.0.3.js"></script>
+    <script type="text/javascript" src="underscore-min.js"></script>
+    <script type="text/x-handlebars-template" id="sessionTemplate">
+      <h1>{{Day}}</h1>
+      {{#each TimeSlots}}
+        <h2>{{Time}}</h2>
+        {{#each Sessions}}
+          <h3>{{Title}}</h3>
+          <p>{{Description}}</p>
+        {{/each}}
+      {{/each}}
+
+    </script>
+  </head>
+  <body>
+
+  <script type="text/javascript">
+  $(document).ready(function() {
+    var sessionTemplate = Handlebars.compile($("#sessionTemplate").html());
+    $.getJSON('sessions.json', function(sessionData) {
+      _.each(sessionData.ScheduledSessions, function(session) {
+        $('body').append(sessionTemplate(session));
+      });
+    });
+  });
+  </script>
+  </body>
+
+</html>

@@ -18,10 +18,11 @@
           {{#each Sessions}}
             <div class="schedule-row">
               <div class="schedule-column column1">{{Title}}</div>
-              <div class="schedule-column column2">{{ScheduledRoom}}</div>
+              <div class="schedule-column column2"><span class="mobile-only">Room:</span> {{ScheduledRoom}}</div>
               <div class="schedule-column column3"><a href="#" data-session-id="{{Id}}">More Info</a></div>
             </div>
             <div class="full-session-details" style="display:none;">
+              <div class="close-details">Close</div>
               {{#if IsFamilyApproved}}<div class="family-approved">Family Approved</div>{{/if}}
               <h4>{{Title}}</h4>
               <p><strong>Speaker(s): {{#each Speakers}}{{FirstName}} {{LastName}} {{/each}}</strong></p>

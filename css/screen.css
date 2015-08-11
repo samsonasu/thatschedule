@@ -129,107 +129,111 @@ li {
   margin: 0 0 10px 40px;
 }
 
-/* line 40, sass/_global.sass */
+/* line 39, sass/_global.sass */
+a {
+  color: #38666a;
+}
+/* line 41, sass/_global.sass */
 a:hover {
   text-decoration: none;
 }
 
-/* line 43, sass/_global.sass */
+/* line 44, sass/_global.sass */
 strong, b {
   font-weight: 600;
 }
 
-/* line 45, sass/_global.sass */
+/* line 46, sass/_global.sass */
 em, i {
   font-style: italic;
 }
 
-/* line 48, sass/_global.sass */
+/* line 49, sass/_global.sass */
 .big-text {
   font-size: 22px;
 }
 
-/* line 50, sass/_global.sass */
+/* line 51, sass/_global.sass */
 .small-text {
   font-size: 12px;
 }
 
-/* line 53, sass/_global.sass */
+/* line 54, sass/_global.sass */
 .table {
   width: 100%;
 }
-/* line 55, sass/_global.sass */
+/* line 56, sass/_global.sass */
 .table th, .table td {
   border: 1px solid #ddd;
   padding: 5px;
 }
-/* line 58, sass/_global.sass */
+/* line 59, sass/_global.sass */
 .table th {
   background: #ccc;
   font-weight: bold;
 }
 
-/* line 62, sass/_global.sass */
+/* line 63, sass/_global.sass */
 .padding-5 {
   padding: 5px;
 }
 
-/* line 64, sass/_global.sass */
+/* line 65, sass/_global.sass */
 .padding-10 {
   padding: 10px;
 }
 
-/* line 66, sass/_global.sass */
+/* line 67, sass/_global.sass */
 .no-margin {
   margin-bottom: 0;
 }
 
-/* line 69, sass/_global.sass */
+/* line 70, sass/_global.sass */
 .center {
   text-align: center;
 }
 
-/* line 71, sass/_global.sass */
+/* line 72, sass/_global.sass */
 .left {
   text-align: left;
 }
 
-/* line 73, sass/_global.sass */
+/* line 74, sass/_global.sass */
 .right {
   text-align: right;
 }
 
-/* line 75, sass/_global.sass */
+/* line 76, sass/_global.sass */
 .float-left {
   float: left;
 }
 
-/* line 77, sass/_global.sass */
+/* line 78, sass/_global.sass */
 .float-right {
   float: right;
 }
 
-/* line 79, sass/_global.sass */
+/* line 80, sass/_global.sass */
 .clear-both {
   clear: both;
 }
 
-/* line 82, sass/_global.sass */
+/* line 83, sass/_global.sass */
 .width-25 {
   width: 25%;
 }
 
-/* line 84, sass/_global.sass */
+/* line 85, sass/_global.sass */
 .width-50 {
   width: 50%;
 }
 
-/* line 86, sass/_global.sass */
+/* line 87, sass/_global.sass */
 .width-100 {
   width: 100%;
 }
 
-/* line 89, sass/_global.sass */
+/* line 90, sass/_global.sass */
 .red {
   color: #8e2222;
 }
@@ -246,7 +250,7 @@ html {
 
 /* line 7, sass/_layout.sass */
 header {
-  background: #000;
+  background: #38666a;
   color: #fff;
   padding: 5px;
   text-align: center;
@@ -263,8 +267,8 @@ header h1 {
 }
 /* line 18, sass/_layout.sass */
 .schedule-day h2 {
-  background: #ccc;
-  border-bottom: 1px solid #c2c2c2;
+  background: #38666a;
+  color: #fff;
   display: block;
   font-size: 22px;
   margin: 0;
@@ -320,7 +324,7 @@ header h1 {
 }
 /* line 59, sass/_layout.sass */
 .full-session-details .family-approved {
-  background: green;
+  background: #38666a;
   color: #fff;
   margin-bottom: 10px;
   padding: 5px;
@@ -330,4 +334,52 @@ header h1 {
 .full-session-details img {
   max-height: 100px;
   max-width: 100px;
+}
+/* line 68, sass/_layout.sass */
+.full-session-details .close-details {
+  background: #c03e24;
+  bottom: 0;
+  color: #fff;
+  cursor: pointer;
+  left: 0;
+  padding: 10px;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* line 80, sass/_layout.sass */
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 568px) {
+  /* line 6, sass/responsive/_layout.sass */
+  .schedule-row .schedule-column {
+    float: none;
+    overflow: visible;
+    white-space: normal;
+  }
+  /* line 10, sass/responsive/_layout.sass */
+  .schedule-row .column1 {
+    font-weight: bold;
+    padding-bottom: 3px;
+    width: 100%;
+  }
+  /* line 14, sass/responsive/_layout.sass */
+  .schedule-row .column2 {
+    border-bottom: 1px solid #ccc;
+    padding-top: 3px;
+    width: 100%;
+  }
+  /* line 18, sass/responsive/_layout.sass */
+  .schedule-row .column3 {
+    display: none;
+  }
+
+  /* line 21, sass/responsive/_layout.sass */
+  .mobile-only {
+    display: inline;
+  }
 }

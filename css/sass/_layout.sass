@@ -5,7 +5,7 @@ html
   box-sizing: inherit
 
 header
-  background: #000
+  background: $blue
   color: #fff
   padding: 5px
   text-align: center
@@ -16,8 +16,8 @@ header
   background: #eee
   margin: 10px
   h2
-    background: #ccc
-    border-bottom: 1px solid #c2c2c2
+    background: $blue
+    color: #fff
     display: block
     font-size: 22px
     margin: 0
@@ -69,7 +69,7 @@ header
   right: 0
   top: 0
   .family-approved
-    background: green
+    background: $blue
     color: #fff
     margin-bottom: 10px
     padding: 5px
@@ -77,6 +77,18 @@ header
   img
     max-height: 100px
     max-width: 100px
+  .close-details
+    background: $red
+    bottom: 0
+    color: #fff
+    cursor: pointer
+    left: 0
+    padding: 10px
+    position: fixed
+    right: 0
+    text-align: center
+    text-transform: uppercase
 
-
+.mobile-only
+  display: none
 

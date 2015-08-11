@@ -2,7 +2,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 17, ../../.rvm/gems/ruby-1.9.3-p484/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../.rvm/gems/ruby-2.2.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,46 +24,46 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../.rvm/gems/ruby-1.9.3-p484/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../.rvm/gems/ruby-2.2.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../.rvm/gems/ruby-1.9.3-p484/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../.rvm/gems/ruby-2.2.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../.rvm/gems/ruby-1.9.3-p484/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../.rvm/gems/ruby-2.2.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../.rvm/gems/ruby-1.9.3-p484/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../.rvm/gems/ruby-2.2.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../.rvm/gems/ruby-1.9.3-p484/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../.rvm/gems/ruby-2.2.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../.rvm/gems/ruby-1.9.3-p484/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../.rvm/gems/ruby-2.2.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../.rvm/gems/ruby-1.9.3-p484/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../.rvm/gems/ruby-2.2.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../.rvm/gems/ruby-1.9.3-p484/gems/compass-0.12.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+/* line 116, ../../../.rvm/gems/ruby-2.2.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
 
@@ -129,107 +129,111 @@ li {
   margin: 0 0 10px 40px;
 }
 
-/* line 40, sass/_global.sass */
+/* line 39, sass/_global.sass */
+a {
+  color: #38666a;
+}
+/* line 41, sass/_global.sass */
 a:hover {
   text-decoration: none;
 }
 
-/* line 43, sass/_global.sass */
+/* line 44, sass/_global.sass */
 strong, b {
   font-weight: 600;
 }
 
-/* line 45, sass/_global.sass */
+/* line 46, sass/_global.sass */
 em, i {
   font-style: italic;
 }
 
-/* line 48, sass/_global.sass */
+/* line 49, sass/_global.sass */
 .big-text {
   font-size: 22px;
 }
 
-/* line 50, sass/_global.sass */
+/* line 51, sass/_global.sass */
 .small-text {
   font-size: 12px;
 }
 
-/* line 53, sass/_global.sass */
+/* line 54, sass/_global.sass */
 .table {
   width: 100%;
 }
-/* line 55, sass/_global.sass */
+/* line 56, sass/_global.sass */
 .table th, .table td {
-  border: 1px solid #dddddd;
+  border: 1px solid #ddd;
   padding: 5px;
 }
-/* line 58, sass/_global.sass */
+/* line 59, sass/_global.sass */
 .table th {
-  background: #cccccc;
+  background: #ccc;
   font-weight: bold;
 }
 
-/* line 62, sass/_global.sass */
+/* line 63, sass/_global.sass */
 .padding-5 {
   padding: 5px;
 }
 
-/* line 64, sass/_global.sass */
+/* line 65, sass/_global.sass */
 .padding-10 {
   padding: 10px;
 }
 
-/* line 66, sass/_global.sass */
+/* line 67, sass/_global.sass */
 .no-margin {
   margin-bottom: 0;
 }
 
-/* line 69, sass/_global.sass */
+/* line 70, sass/_global.sass */
 .center {
   text-align: center;
 }
 
-/* line 71, sass/_global.sass */
+/* line 72, sass/_global.sass */
 .left {
   text-align: left;
 }
 
-/* line 73, sass/_global.sass */
+/* line 74, sass/_global.sass */
 .right {
   text-align: right;
 }
 
-/* line 75, sass/_global.sass */
+/* line 76, sass/_global.sass */
 .float-left {
   float: left;
 }
 
-/* line 77, sass/_global.sass */
+/* line 78, sass/_global.sass */
 .float-right {
   float: right;
 }
 
-/* line 79, sass/_global.sass */
+/* line 80, sass/_global.sass */
 .clear-both {
   clear: both;
 }
 
-/* line 82, sass/_global.sass */
+/* line 83, sass/_global.sass */
 .width-25 {
   width: 25%;
 }
 
-/* line 84, sass/_global.sass */
+/* line 85, sass/_global.sass */
 .width-50 {
   width: 50%;
 }
 
-/* line 86, sass/_global.sass */
+/* line 87, sass/_global.sass */
 .width-100 {
   width: 100%;
 }
 
-/* line 89, sass/_global.sass */
+/* line 90, sass/_global.sass */
 .red {
   color: #8e2222;
 }
@@ -246,8 +250,8 @@ html {
 
 /* line 7, sass/_layout.sass */
 header {
-  background: black;
-  color: white;
+  background: #38666a;
+  color: #fff;
   padding: 5px;
   text-align: center;
 }
@@ -258,43 +262,22 @@ header h1 {
 
 /* line 15, sass/_layout.sass */
 .schedule-day {
-  background: #eeeeee;
+  background: #eee;
   margin: 10px;
 }
 /* line 18, sass/_layout.sass */
 .schedule-day h2 {
-  background: #cccccc;
-  border-bottom: 1px solid #c2c2c2;
+  background: #38666a;
+  color: #fff;
   display: block;
   font-size: 22px;
   margin: 0;
   padding: 8px;
 }
-/* line 30, sass/_layout.sass */
-.schedule-day .day-header {
-  cursor: pointer;
-}
-/* line 32, sass/_layout.sass */
-.schedule-day .day-header::after {
-  float: right;
-  content: "[-]";
-}
-/* line 37, sass/_layout.sass */
-.schedule-day.collapsed .day-header::after {
-  content: "[+]";
-}
-/* line 39, sass/_layout.sass */
-.schedule-day.collapsed .day-timeslots {
-  display: none;
-}
 
-<<<<<<< HEAD
-/* line 43, sass/_layout.sass */
-=======
 /* line 27, sass/_layout.sass */
->>>>>>> origin/master
 .schedule-timeslot h3 {
-  background: #dddddd;
+  background: #ddd;
   border-bottom: 1px solid #d2d2d2;
   display: block;
   font-size: 16px;
@@ -302,20 +285,12 @@ header h1 {
   padding: 8px;
 }
 
-<<<<<<< HEAD
-/* line 51, sass/_layout.sass */
-=======
 /* line 35, sass/_layout.sass */
->>>>>>> origin/master
 .schedule-row {
   overflow: hidden;
   *zoom: 1;
 }
-<<<<<<< HEAD
-/* line 53, sass/_layout.sass */
-=======
 /* line 37, sass/_layout.sass */
->>>>>>> origin/master
 .schedule-row .schedule-column {
   float: left;
   overflow: hidden;
@@ -323,17 +298,6 @@ header h1 {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-<<<<<<< HEAD
-/* line 59, sass/_layout.sass */
-.schedule-row .column1 {
-  width: 50%;
-}
-/* line 61, sass/_layout.sass */
-.schedule-row .column2 {
-  width: 30%;
-}
-/* line 63, sass/_layout.sass */
-=======
 /* line 43, sass/_layout.sass */
 .schedule-row .column1 {
   width: 50%;
@@ -343,7 +307,6 @@ header h1 {
   width: 30%;
 }
 /* line 47, sass/_layout.sass */
->>>>>>> origin/master
 .schedule-row .column3 {
   text-align: center;
   width: 20%;
@@ -361,7 +324,7 @@ header h1 {
 }
 /* line 59, sass/_layout.sass */
 .full-session-details .family-approved {
-  background: green;
+  background: #38666a;
   color: #fff;
   margin-bottom: 10px;
   padding: 5px;
@@ -371,4 +334,52 @@ header h1 {
 .full-session-details img {
   max-height: 100px;
   max-width: 100px;
+}
+/* line 68, sass/_layout.sass */
+.full-session-details .close-details {
+  background: #c03e24;
+  bottom: 0;
+  color: #fff;
+  cursor: pointer;
+  left: 0;
+  padding: 10px;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* line 80, sass/_layout.sass */
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 568px) {
+  /* line 6, sass/responsive/_layout.sass */
+  .schedule-row .schedule-column {
+    float: none;
+    overflow: visible;
+    white-space: normal;
+  }
+  /* line 10, sass/responsive/_layout.sass */
+  .schedule-row .column1 {
+    font-weight: bold;
+    padding-bottom: 3px;
+    width: 100%;
+  }
+  /* line 14, sass/responsive/_layout.sass */
+  .schedule-row .column2 {
+    border-bottom: 1px solid #ccc;
+    padding-top: 3px;
+    width: 100%;
+  }
+  /* line 18, sass/responsive/_layout.sass */
+  .schedule-row .column3 {
+    display: none;
+  }
+
+  /* line 21, sass/responsive/_layout.sass */
+  .mobile-only {
+    display: inline;
+  }
 }

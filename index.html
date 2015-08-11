@@ -11,45 +11,47 @@
   <script type="text/javascript" src="underscore-min.js"></script>
 	<script type="text/x-handlebars-template" id="dayTemplate">
 		<div class="schedule-day">
-      <h2>{{Day}}</h2>
-      {{#each TimeSlots}}
-        <div class="schedule-timeslot">
-          <h3>{{Time}}</h3>
-          {{#each Sessions}}
-            <div class="schedule-row">
-              <div class="schedule-column column1">{{Title}}</div>
-              <div class="schedule-column column2"><span class="mobile-only">Room:</span> {{ScheduledRoom}}</div>
-              <div class="schedule-column column3"><a href="#" data-session-id="{{Id}}">More Info</a></div>
-            </div>
-            <div class="full-session-details" style="display:none;">
-              <div class="close-details">Close</div>
-              {{#if IsFamilyApproved}}<div class="family-approved">Family Approved</div>{{/if}}
-              <h4>{{Title}}</h4>
-              <p><strong>Speaker(s): {{#each Speakers}}{{FirstName}} {{LastName}} {{/each}}</strong></p>
-              <p><em>Room: {{ScheduledRoom}} / Class Level: {{Level}}</em></p>
-              <p>{{Description}}</p>
-              <h4>Speakers</h4>
-              {{#each Speakers}}
-                <div class="session-speakers">
-                  <img src="http://www.thatconference.com{{HeadShot}}" />
-                  <p>
-                    <strong>{{FirstName}} {{LastName}}</strong><br />
-                    <em>{{Title}}</em><br />
-                    {{Company}}
-                  </p>
-                  <p>{{Biography}}</p>
-                  {{#if WebSite}}<a href="{{WebSite}}" target="_blank">{{WebSite}}</a><br />{{/if}}
-                  {{#if Twitter}}<a href="https://twitter.com/{{Twitter}}" target="_blank">{{Twitter}}</a><br />{{/if}}
-                  {{#if Facebook}}<a href="{{Facebook}}" target="_blank">{{Facebook}}</a><br />{{/if}}
-                  {{#if GooglePlus}}<a href="{{GooglePlus}}" target="_blank">{{GooglePlus}}</a><br />{{/if}}
-                  {{#if LinkedIn}}<a href="{{LinkedIn}}" target="_blank">{{LinkedIn}}</a><br />{{/if}}
-                  {{#if GitHub}}<a href="{{GitHub}}" target="_blank">{{GitHub}}</a>{{/if}}
-                </div>
-              {{/each}}
-            </div>
-          {{/each}}
-        </div>
-      {{/each}}
+      <h2 class="day-header">{{Day}}</h2>
+      <div class="day-timeslots">
+        {{#each TimeSlots}}
+          <div class="schedule-timeslot">
+            <h3>{{Time}}</h3>
+            {{#each Sessions}}
+              <div class="schedule-row">
+                <div class="schedule-column column1">{{Title}}</div>
+                <div class="schedule-column column2"><span class="mobile-only">Room:</span> {{ScheduledRoom}}</div>
+                <div class="schedule-column column3"><a href="#" data-session-id="{{Id}}">More Info</a></div>
+              </div>
+              <div class="close-details" style="display:none">Close</div>
+              <div class="full-session-details" style="display:none;">
+                {{#if IsFamilyApproved}}<div class="family-approved">Family Approved</div>{{/if}}
+                <h4>{{Title}}</h4>
+                <p><strong>Speaker(s): {{#each Speakers}}{{FirstName}} {{LastName}} {{/each}}</strong></p>
+                <p><em>Room: {{ScheduledRoom}} / Class Level: {{Level}}</em></p>
+                <p>{{Description}}</p>
+                <h4>Speakers</h4>
+                {{#each Speakers}}
+                  <div class="session-speakers">
+                    <img src="http://www.thatconference.com{{HeadShot}}" />
+                    <p>
+                      <strong>{{FirstName}} {{LastName}}</strong><br />
+                      <em>{{Title}}</em><br />
+                      {{Company}}
+                    </p>
+                    <p>{{Biography}}</p>
+                    {{#if WebSite}}<a href="{{WebSite}}" target="_blank">{{WebSite}}</a><br />{{/if}}
+                    {{#if Twitter}}<a href="https://twitter.com/{{Twitter}}" target="_blank">{{Twitter}}</a><br />{{/if}}
+                    {{#if Facebook}}<a href="{{Facebook}}" target="_blank">{{Facebook}}</a><br />{{/if}}
+                    {{#if GooglePlus}}<a href="{{GooglePlus}}" target="_blank">{{GooglePlus}}</a><br />{{/if}}
+                    {{#if LinkedIn}}<a href="{{LinkedIn}}" target="_blank">{{LinkedIn}}</a><br />{{/if}}
+                    {{#if GitHub}}<a href="{{GitHub}}" target="_blank">{{GitHub}}</a>{{/if}}
+                  </div>
+                {{/each}}
+              </div>
+            {{/each}}
+          </div>
+        {{/each}}
+      </div>
     </div>
   </script>
   <script type="text/javascript" src="app.js"></script>

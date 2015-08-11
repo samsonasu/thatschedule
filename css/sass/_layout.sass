@@ -46,6 +46,7 @@ header
 
 .schedule-row
   +clearfix
+  cursor: pointer
   .schedule-column
     float: left
     overflow: hidden
@@ -68,6 +69,8 @@ header
   position: fixed
   right: 0
   top: 0
+  overflow-y: scroll
+  z-index: 1
   .family-approved
     background: $blue
     color: #fff
@@ -88,6 +91,7 @@ header
     right: 0
     text-align: center
     text-transform: uppercase
+    z-index: 2
 
 .mobile-only
   display: none

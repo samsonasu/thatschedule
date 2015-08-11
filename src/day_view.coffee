@@ -22,7 +22,11 @@ class TS.DayView
     $target = $(ev.target).closest('.schedule-day').toggleClass('collapsed')
 
   showDetails: (ev) =>
-    $(ev.target).closest('.session').find('.full-session-details, .close-details').show()
+    $session = $(ev.target).closest('.session')
+    $session.find('.full-session-details, .close-details').show()
+    lazyImage = $session.find('.lazy-image')
+    if lazyImage.data('src') && !lazyImage.find('img')[0]
+      lazyImage.append("<img src=#{lazyImage.data('src')}>")
     $('body').css
       overflow: 'hidden'
 

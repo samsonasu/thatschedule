@@ -48,14 +48,15 @@
     };
 
     DayView.prototype.showDetails = function(ev) {
-      $(ev.target).closest('.schedule-row').siblings('.full-session-details, .close-details').show();
+      $(ev.target).closest('.session').find('.full-session-details, .close-details').show();
       return $('body').css({
         overflow: 'hidden'
       });
     };
 
     DayView.prototype.hideDetails = function(ev) {
-      $(ev.target).closest('.full-session-details').hide();
+      ev.stopPropagation();
+      $(ev.target).closest('.session').find('.full-session-details, .close-details').hide();
       return $('body').css({
         overflow: 'visible'
       });

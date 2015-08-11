@@ -335,7 +335,7 @@ header h1 {
   background: white;
   bottom: 0;
   left: 0;
-  padding: 10px;
+  padding: 10px 10px 50px;
   position: fixed;
   right: 0;
   top: 0;
@@ -355,8 +355,9 @@ header h1 {
   max-height: 100px;
   max-width: 100px;
 }
+
 /* line 83, sass/_layout.sass */
-.full-session-details .close-details {
+.close-details {
   background: #c03e24;
   bottom: 0;
   color: white;

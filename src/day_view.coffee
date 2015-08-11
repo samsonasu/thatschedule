@@ -22,12 +22,13 @@ class TS.DayView
     $target = $(ev.target).closest('.schedule-day').toggleClass('collapsed')
 
   showDetails: (ev) =>
-    $(ev.target).closest('.schedule-row').siblings('.full-session-details, .close-details').show()
+    $(ev.target).closest('.session').find('.full-session-details, .close-details').show()
     $('body').css
       overflow: 'hidden'
 
   hideDetails: (ev) =>
-    $(ev.target).closest('.full-session-details').hide()
+    ev.stopPropagation()
+    $(ev.target).closest('.session').find('.full-session-details, .close-details').hide()
     $('body').css
       overflow: 'visible'
 

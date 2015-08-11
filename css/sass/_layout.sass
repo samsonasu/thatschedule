@@ -27,6 +27,18 @@ header
     margin: 0
     padding: 8px
 
+  .day-header
+    cursor: pointer
+    &::after
+      float: right
+      content: '[-]'
+
+  &.collapsed
+    .day-header::after
+      content: '[+]'
+    .day-timeslots
+      display: none
+
 .schedule-timeslot
   h3
     background: #ddd
@@ -34,7 +46,7 @@ header
     display: block
     font-size: 16px
     margin: 0
-    padding: 8px    
+    padding: 8px
 
 .schedule-row
   +clearfix
